@@ -1,0 +1,1 @@
+dbHost;adad-724cc.firebaseio.com:apiUrl;omdbapi.com:apiKey;a744cb19

@@ -1,0 +1,1 @@
+VE;Validation Error;400:NF;Not Found Error;404:EU;Unprocessable Entity;422:UE;Unexpected Error;500

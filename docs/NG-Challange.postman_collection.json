@@ -1,0 +1,498 @@
+{
+	"info": {
+		"_postman_id": "5197ac52-920d-429b-9fce-bfdf630eaaeb",
+		"name": "NG-Challange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Title\": \"Titanic\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					]
+				},
+				"description": "Add Movie to database and fetch it's additional data from external API"
+			},
+			"response": [
+				{
+					"name": "Create Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Title\": \"Titanic\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 29 Dec 2018 17:52:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Actors\": \"Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates\",\n    \"Awards\": \"Won 11 Oscars. Another 111 wins & 77 nominations.\",\n    \"BoxOffice\": \"N/A\",\n    \"Country\": \"USA\",\n    \"DVD\": \"10 Sep 2012\",\n    \"Director\": \"James Cameron\",\n    \"Genre\": \"Drama, Romance\",\n    \"Id\": \"43fdd2fe1025acffc07cfa0150e75641\",\n    \"Language\": \"English, Swedish\",\n    \"Metascore\": \"75\",\n    \"Plot\": \"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.\",\n    \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg\",\n    \"Production\": \"Paramount Pictures\",\n    \"Rated\": \"PG-13\",\n    \"Ratings\": [\n        {\n            \"Source\": \"Internet Movie Database\",\n            \"Value\": \"7.8/10\"\n        },\n        {\n            \"Source\": \"Rotten Tomatoes\",\n            \"Value\": \"89%\"\n        },\n        {\n            \"Source\": \"Metacritic\",\n            \"Value\": \"75/100\"\n        }\n    ],\n    \"Released\": \"19 Dec 1997\",\n    \"Response\": \"True\",\n    \"Runtime\": \"194 min\",\n    \"Title\": \"Titanic\",\n    \"Type\": \"movie\",\n    \"Website\": \"http://www.titanicmovie.com/\",\n    \"Writer\": \"James Cameron\",\n    \"Year\": \"1997\",\n    \"imdbID\": \"tt0120338\",\n    \"imdbRating\": \"7.8\",\n    \"imdbVotes\": \"919,766\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					]
+				},
+				"description": "Fetchs all movies saved in database"
+			},
+			"response": [
+				{
+					"name": "Get Movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 29 Dec 2018 17:52:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"43fdd2fe1025acffc07cfa0150e75641\": {\n        \"Actors\": \"Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates\",\n        \"Awards\": \"Won 11 Oscars. Another 111 wins & 77 nominations.\",\n        \"BoxOffice\": \"N/A\",\n        \"Country\": \"USA\",\n        \"DVD\": \"10 Sep 2012\",\n        \"Director\": \"James Cameron\",\n        \"Genre\": \"Drama, Romance\",\n        \"Id\": \"43fdd2fe1025acffc07cfa0150e75641\",\n        \"Language\": \"English, Swedish\",\n        \"Metascore\": \"75\",\n        \"Plot\": \"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.\",\n        \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg\",\n        \"Production\": \"Paramount Pictures\",\n        \"Rated\": \"PG-13\",\n        \"Ratings\": [\n            {\n                \"Source\": \"Internet Movie Database\",\n                \"Value\": \"7.8/10\"\n            },\n            {\n                \"Source\": \"Rotten Tomatoes\",\n                \"Value\": \"89%\"\n            },\n            {\n                \"Source\": \"Metacritic\",\n                \"Value\": \"75/100\"\n            }\n        ],\n        \"Released\": \"19 Dec 1997\",\n        \"Response\": \"True\",\n        \"Runtime\": \"194 min\",\n        \"Title\": \"Titanic\",\n        \"Type\": \"movie\",\n        \"Website\": \"http://www.titanicmovie.com/\",\n        \"Writer\": \"James Cameron\",\n        \"Year\": \"1997\",\n        \"imdbID\": \"tt0120338\",\n        \"imdbRating\": \"7.8\",\n        \"imdbVotes\": \"919,766\"\n    },\n    \"dee409c1b184979b4616a04c65b89a68\": {\n        \"Actors\": \"Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates\",\n        \"Awards\": \"Won 11 Oscars. Another 111 wins & 77 nominations.\",\n        \"BoxOffice\": \"N/A\",\n        \"Country\": \"USA\",\n        \"DVD\": \"10 Sep 2012\",\n        \"Director\": \"James Cameron\",\n        \"Genre\": \"Drama, Romance\",\n        \"Id\": \"dee409c1b184979b4616a04c65b89a68\",\n        \"Language\": \"English, Swedish\",\n        \"Metascore\": \"75\",\n        \"Plot\": \"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.\",\n        \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg\",\n        \"Production\": \"Paramount Pictures\",\n        \"Rated\": \"PG-13\",\n        \"Ratings\": [\n            {\n                \"Source\": \"Internet Movie Database\",\n                \"Value\": \"7.8/10\"\n            },\n            {\n                \"Source\": \"Rotten Tomatoes\",\n                \"Value\": \"89%\"\n            },\n            {\n                \"Source\": \"Metacritic\",\n                \"Value\": \"75/100\"\n            }\n        ],\n        \"Released\": \"19 Dec 1997\",\n        \"Response\": \"True\",\n        \"Runtime\": \"194 min\",\n        \"Title\": \"Titanic\",\n        \"Type\": \"movie\",\n        \"Website\": \"http://www.titanicmovie.com/\",\n        \"Writer\": \"James Cameron\",\n        \"Year\": \"1997\",\n        \"imdbID\": \"tt0120338\",\n        \"imdbRating\": \"7.8\",\n        \"imdbVotes\": \"919,766\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"MovieId\": \"dee409c1b184979b4616a04c65b89a68\",\n\t\"Text\": \"Nice movie\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/comments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comments"
+					]
+				},
+				"description": "Add comment to database for existing movie"
+			},
+			"response": [
+				{
+					"name": "Create Comment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"MovieId\": \"dee409c1b184979b4616a04c65b89a68\",\n\t\"Text\": \"Nice movie\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 29 Dec 2018 17:53:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Id\": \"c350392fcbcc966f05d29bb92f13b417\",\n    \"MovieId\": \"dee409c1b184979b4616a04c65b89a68\",\n    \"Text\": \"Nice movie\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/comments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comments"
+					]
+				},
+				"description": "Fetchs comments saved in database"
+			},
+			"response": [
+				{
+					"name": "Get Comments",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 29 Dec 2018 17:53:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"c350392fcbcc966f05d29bb92f13b417\": {\n        \"Id\": \"c350392fcbcc966f05d29bb92f13b417\",\n        \"MovieId\": \"dee409c1b184979b4616a04c65b89a68\",\n        \"Text\": \"Nice movie\"\n    },\n    \"cc5ee115cedeeca4e55d7be077af99a5\": {\n        \"Id\": \"cc5ee115cedeeca4e55d7be077af99a5\",\n        \"MovieId\": \"dee409c1b184979b4616a04c65b89a68\",\n        \"Text\": \"Nice movie\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get query movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/movies?BoxOffice=N/A",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "BoxOffice",
+							"value": "N/A"
+						}
+					]
+				},
+				"description": "Get Movies that mets requirment in URL query"
+			},
+			"response": [
+				{
+					"name": "Get query movie",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/movies?BoxOffice=N/A",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "BoxOffice",
+									"value": "N/A"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 29 Dec 2018 17:53:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"43fdd2fe1025acffc07cfa0150e75641\": {\n        \"Actors\": \"Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates\",\n        \"Awards\": \"Won 11 Oscars. Another 111 wins & 77 nominations.\",\n        \"BoxOffice\": \"N/A\",\n        \"Country\": \"USA\",\n        \"DVD\": \"10 Sep 2012\",\n        \"Director\": \"James Cameron\",\n        \"Genre\": \"Drama, Romance\",\n        \"Id\": \"43fdd2fe1025acffc07cfa0150e75641\",\n        \"Language\": \"English, Swedish\",\n        \"Metascore\": \"75\",\n        \"Plot\": \"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.\",\n        \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg\",\n        \"Production\": \"Paramount Pictures\",\n        \"Rated\": \"PG-13\",\n        \"Ratings\": [\n            {\n                \"Source\": \"Internet Movie Database\",\n                \"Value\": \"7.8/10\"\n            },\n            {\n                \"Source\": \"Rotten Tomatoes\",\n                \"Value\": \"89%\"\n            },\n            {\n                \"Source\": \"Metacritic\",\n                \"Value\": \"75/100\"\n            }\n        ],\n        \"Released\": \"19 Dec 1997\",\n        \"Response\": \"True\",\n        \"Runtime\": \"194 min\",\n        \"Title\": \"Titanic\",\n        \"Type\": \"movie\",\n        \"Website\": \"http://www.titanicmovie.com/\",\n        \"Writer\": \"James Cameron\",\n        \"Year\": \"1997\",\n        \"imdbID\": \"tt0120338\",\n        \"imdbRating\": \"7.8\",\n        \"imdbVotes\": \"919,766\"\n    },\n    \"dee409c1b184979b4616a04c65b89a68\": {\n        \"Actors\": \"Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates\",\n        \"Awards\": \"Won 11 Oscars. Another 111 wins & 77 nominations.\",\n        \"BoxOffice\": \"N/A\",\n        \"Country\": \"USA\",\n        \"DVD\": \"10 Sep 2012\",\n        \"Director\": \"James Cameron\",\n        \"Genre\": \"Drama, Romance\",\n        \"Id\": \"dee409c1b184979b4616a04c65b89a68\",\n        \"Language\": \"English, Swedish\",\n        \"Metascore\": \"75\",\n        \"Plot\": \"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.\",\n        \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg\",\n        \"Production\": \"Paramount Pictures\",\n        \"Rated\": \"PG-13\",\n        \"Ratings\": [\n            {\n                \"Source\": \"Internet Movie Database\",\n                \"Value\": \"7.8/10\"\n            },\n            {\n                \"Source\": \"Rotten Tomatoes\",\n                \"Value\": \"89%\"\n            },\n            {\n                \"Source\": \"Metacritic\",\n                \"Value\": \"75/100\"\n            }\n        ],\n        \"Released\": \"19 Dec 1997\",\n        \"Response\": \"True\",\n        \"Runtime\": \"194 min\",\n        \"Title\": \"Titanic\",\n        \"Type\": \"movie\",\n        \"Website\": \"http://www.titanicmovie.com/\",\n        \"Writer\": \"James Cameron\",\n        \"Year\": \"1997\",\n        \"imdbID\": \"tt0120338\",\n        \"imdbRating\": \"7.8\",\n        \"imdbVotes\": \"919,766\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Movie comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/comments?MovieId=dee409c1b184979b4616a04c65b89a68",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comments"
+					],
+					"query": [
+						{
+							"key": "MovieId",
+							"value": "dee409c1b184979b4616a04c65b89a68"
+						}
+					]
+				},
+				"description": "Fetchs comments for existing Movie"
+			},
+			"response": [
+				{
+					"name": "Get Movie comments",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/comments?MovieId=dee409c1b184979b4616a04c65b89a68",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "MovieId",
+									"value": "dee409c1b184979b4616a04c65b89a68"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 29 Dec 2018 17:53:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"c350392fcbcc966f05d29bb92f13b417\": {\n        \"Id\": \"c350392fcbcc966f05d29bb92f13b417\",\n        \"MovieId\": \"dee409c1b184979b4616a04c65b89a68\",\n        \"Text\": \"Nice movie\"\n    },\n    \"cc5ee115cedeeca4e55d7be077af99a5\": {\n        \"Id\": \"cc5ee115cedeeca4e55d7be077af99a5\",\n        \"MovieId\": \"dee409c1b184979b4616a04c65b89a68\",\n        \"Text\": \"Nice movie\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
